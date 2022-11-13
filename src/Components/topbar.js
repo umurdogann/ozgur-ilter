@@ -1,4 +1,7 @@
+import {  useEffect, useState } from "react";
+import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import styled from "styled-components";
+
 const Container = styled.div`
 width:100%;
 display:flex;
@@ -28,6 +31,7 @@ font-weight: 400;
 font-size: 44px;
 line-height: 58px;
 color: #000000;
+cursor: pointer;
 `;
 
 const NavItem = styled.div`
@@ -71,25 +75,34 @@ cursor: pointer;
 
 const Topbar = (props) => {
     const pages = ['work', 'about', 'contact'];
+    const [selectedPage, setSelectedPage] = useState('work');
+    const [params,setParams] = useSearchParams();
+    const workIndex= parseInt(params.get('w'));
+    const navigate = useNavigate();
+    
+    const navigateWork = (val) =>{
+        navigate(`/work/${props.works[workIndex+ val]}?w=${workIndex+ val}`)
+    }
     return (
         <Container>
 
             <Navigation>
-                {(props.showName) && <Title>
-                    Ozgur Ilter
+                {(selectedPage === 'work') && <Title onClick={()=>{navigate('/')}}>
+                    Özgür İlter
                 </Title>}
                 <Navbar>
                     {pages.map((page, index) => {
-                        return <NavItem key={index} selected={props.selectedPage === page } onClick={()=>{
-                            props.setSelectedPage(page);
+                        return <NavItem key={index} selected={selectedPage === page} onClick={() => {
+                            setSelectedPage(page);
+                            navigate(`/${page}`);
                         }}>{page}</NavItem>
                     })}
                 </Navbar>
 
             </Navigation>
-            <ArrowBar alignRight={!props.leftArrow && props.rightArrow}>
-                {props.leftArrow && <Arrow onClick={props.leftArrow}>◄</Arrow>}
-                {props.rightArrow && <Arrow onClick={props.rightArrow}>►</Arrow>}
+            <ArrowBar alignRight={workIndex === 0}>
+                {workIndex - 1 >= 0 && <Arrow onClick={()=>navigateWork(-1)}>◄</Arrow>}
+                {workIndex + 1 < props.works.length && <Arrow onClick={()=>navigateWork(1)}>►</Arrow>}
             </ArrowBar>
         </Container>
     );

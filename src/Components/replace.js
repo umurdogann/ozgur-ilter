@@ -48,8 +48,8 @@ gap:23px;
 const Column = styled.div`
 display:flex;
 flex-direction: column;
-width:100%;
-align-items: flex-start
+align-items: flex-start;
+gap: 23px;
 `;
 
 const Row = styled.div`
@@ -67,7 +67,6 @@ width:100%;
 
 
 const Replace = (props) => {
-    let imgs = [];
     return (
         <Container>
             <Title>

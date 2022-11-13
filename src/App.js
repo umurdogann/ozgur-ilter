@@ -10,18 +10,30 @@ import OldNormal from "./Components/old-normal";
 import Moments from "./Components/moments";
 import About from "./Components/about";
 import Contact from "./Components/contact";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
+
 
 function App() {
-  let [selectedPage, setSelectedPage] = useState('work');
-
-  
-  return (
+  const works = ['replace', 'obscurity', 'asthma', 'island', 'human', 'here', 'old-normal', 'moments']
+return (
     <>
-      <Topbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-      {selectedPage === 'work' && <MainPage></MainPage>}
-      {selectedPage === 'about' && <About></About>}
-      {selectedPage === 'contact' && <Contact></Contact>}
+
+      <Topbar works={works} />
+      <Routes>
+      <Route exact path="/" element={<MainPage  works={works}/>} />
+        <Route exact path="/work" element={<MainPage  works={works}/>} />
+        <Route exact path="/about" element={<About />} />
+        <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/work/replace" element={<Replace />} />
+        <Route exact path="/work/obscurity" element={<Obscurity />} />
+        <Route exact path="/work/asthma" element={<Asthma />} />
+        <Route exact path="/work/island" element={<Island />} />
+        <Route exact path="/work/human" element={<Human />} />
+        <Route exact path="/work/here" element={<Here />} />
+        <Route exact path="/work/old-normal" element={<OldNormal />} />
+        <Route exact path="/work/moments" element={<Moments />} />
+      </Routes>
 
     </>
   );
