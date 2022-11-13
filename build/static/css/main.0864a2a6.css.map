@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.0864a2a6.css","mappings":"oFACA,KAEE,qBAAsB,CAEtB,cAAe,CADf,QAAS,CAFT,iBAIF","sources":["index.css"],"sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital@0;1&display=swap');\nbody{\n  padding: 57px 81px;\n  box-sizing: border-box;\n  margin: 0;\n  font-size: 16px;\n}"],"names":[],"sourceRoot":""}
