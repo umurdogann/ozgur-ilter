@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/ozgur-ilter/static/css/main.0864a2a6.css",
+    "main.js": "/ozgur-ilter/static/js/main.68052308.js",
+    "static/media/1.png": "/ozgur-ilter/static/media/1.c7190fe88a58d0e8036d.png",
+    "static/media/9.png": "/ozgur-ilter/static/media/9.d6b9306266f4ccb54328.png",
+    "static/media/10.png": "/ozgur-ilter/static/media/10.ee2c55043c7bbb3e1849.png",
+    "static/media/4.png": "/ozgur-ilter/static/media/4.07ccb6c224c469758d73.png",
+    "static/media/6.png": "/ozgur-ilter/static/media/6.e27325b5abf44d1657bb.png",
+    "static/media/2.png": "/ozgur-ilter/static/media/2.58d575d9a2af65433947.png",
+    "static/media/7.png": "/ozgur-ilter/static/media/7.73675b2f507d0a3604e7.png",
+    "static/media/5.png": "/ozgur-ilter/static/media/5.276b1ea46c9024d87cf5.png",
+    "static/media/8.png": "/ozgur-ilter/static/media/8.466be5e8fe6355edee0f.png",
+    "static/media/3.png": "/ozgur-ilter/static/media/3.156e7d942940e0efe5bd.png",
+    "static/media/11.png": "/ozgur-ilter/static/media/11.0d4cf813364884981e56.png",
+    "static/media/ozgur-ilter.png": "/ozgur-ilter/static/media/ozgur-ilter.98fafafd36b7c8d5a36e.png",
+    "index.html": "/ozgur-ilter/index.html",
+    "main.0864a2a6.css.map": "/ozgur-ilter/static/css/main.0864a2a6.css.map",
+    "main.68052308.js.map": "/ozgur-ilter/static/js/main.68052308.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0864a2a6.css",
+    "static/js/main.68052308.js"
+  ]
+}
